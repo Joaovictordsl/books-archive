@@ -1,6 +1,6 @@
 FROM nginx:alpine
 
-COPY books-archive/ /usr/share/nginx/html
+COPY ./ /usr/share/nginx/html
 
 EXPOSE 80
 
