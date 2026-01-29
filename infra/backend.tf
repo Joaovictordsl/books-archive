@@ -1,11 +1,11 @@
 terraform {
- backend "s3"{
+  backend "s3" {
 
-  bucket = "my-s3-bucket-johnny-books-archive"
-  region = "us-east-1"
-  key = "books-archive/terraform.tfsate"
-  encrypt = true
-  use_lockfile = true 
+    bucket       = "my-s3-bucket-johnny-books-archive"
+    region       = "us-east-1"
+    key          = "books-archive/terraform.tfsate"
+    encrypt      = true
+    use_lockfile = true
   }
 }
 
