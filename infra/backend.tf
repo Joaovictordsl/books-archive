@@ -1,9 +1,16 @@
-resource "aws_s3_bucket" "bucket" {
-  bucket = "my-s3-bucket-books-archive"
-  region = "us-east-1"
+#terraform {
+# backend "s3"{
 
-  tags = {
-    Name = "S3 bucket"
-    Provisioned = "Terraform"
-  }
+#  bucket = "my-s3-bucket-johnny-books-archive"
+#  region = "us-east-1"
+#  key = "books-archive/terraform.tfsate"
+#  encrypt = true
+#
+#  }
+#}
+
+resource "aws_s3_bucket" "bucket" {
+
+  bucket = "my-s3-bucket-johnny-books-archive"
+
 }
