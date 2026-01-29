@@ -42,7 +42,7 @@ resource "aws_security_group" "security_group" {
     cidr_blocks = ["191.185.181.57/32"]
   }
 
-  engress {
+  egress {
     from_port   = 0
     to_port     = 65350
     protocol    = "tcp"
@@ -52,7 +52,9 @@ resource "aws_security_group" "security_group" {
 }
 
 resource "aws_instance" "ec2-server" {
-  ami           = "ami-0532be01f26a3de55"
-  instance_type = "t3.micro"
+  ami                    = "ami-0532be01f26a3de55"
+  instance_type          = "t3.micro"
+  key_name               = aws_key_pair.key_pair.key_name
+  vpc_security_group_ids = [aws_security_group.security_group.id]
 
 }
