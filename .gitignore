@@ -39,3 +39,21 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Ignora o diretório de trabalho do Terraform (contém binários e módulos)
+.terraform/
+
+# Ignora arquivos de estado (contém informações sensíveis da infraestrutura)
+*.tfstate
+*.tfstate.backup
+*.tfstate.lock.info
+
+# Ignora variáveis sensíveis (onde você costuma colocar senhas/tokens)
+*.tfvars
+*.tfvars.json
+
+# Ignora arquivos de log
+*.log
+
+# Ignora pacotes de plano de execução
+*.tfplan
